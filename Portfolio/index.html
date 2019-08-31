@@ -4,7 +4,7 @@
   Date Created: 8/29/19
   Most recent revision:
 -->
-<html>
+<html lang="en">
 
 <head>
     <title>Brianna's Portfolio</title>
@@ -12,46 +12,92 @@
 
 <body>
 
+  <header>
     <h1>Portfolio for Brianna Larson</h1>
+  </header>
 
 <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
-  <hr />
-      <p>Links will go here.</p>
-  <hr />
+  <nav>
+    <hr />
+        <p><a href="projects.html">Projects</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="testimonials.html">Testimonials</a></p>
+    <hr />
+  </nav>
 
+  <section>
+
+    <article id="about-me">
     <h2><em>About Me</em></h2>
-      <p>
-        I am a recent gradute from the University of Minnesota Class of 2019
-        with a Bachelor of Science in Mathematics and a minor in Spanish Studies.
-      </p>
-      <p>
-        I currently work as an Account Install Specialist for Prime Therapeutics
-        in Eagan, MN.
-      </p>
 
+      <img src="Images/AboutMe.jpg" alt="Portrait of Brianna Larson" />
+      <p>
+        I am a recent gradute from the <strong>University of Minnesota Class of 2019</strong> with a
+        <span style="background-color: lightblue; border: thin solid darkblue;">Bachelor of Science in Mathematics</span> and a minor in
+        <span style="background-color: lightpink; border: thin solid darkred;">Spanish Studies.</span>
+      </p>
+      <p>
+        I currently work as an <strong>Account Install Specialist</strong> for Prime Therapeutics in Eagan, MN.
+      </p>
+    </article>
+
+    <article id="past-experiences">
     <h2><em>Past Experiences</em></h2>
-      <p>
-        Before landing a job at Prime, I worked as a shift supervisor at
-        Starbucks in Eden Prairie, MN.
-      </p>
-      <p>
-        I am also very well traveled as I have visited 6 different countries from
-        4 different continents, including Germany, Switzerland, Austria, China,
-        South Africa, and Cananda.
-      </p>
 
+      <img src="Images/PastExperiences.jpg" alt="Picture from trip to Switzerland" />
+
+      <table>
+        <caption>Employment History</caption>
+
+        <tr>
+          <th>Years of Employment</th>  <th>Title</th>  <th>Company</th>
+        </tr>
+
+        <tr>
+          <td>2019-Present</td> <td>Account Install Specialist</td> <td>Prime Therapeutics</td>
+        </tr>
+
+        <tr>
+          <td>2015-2019</td>  <td>Shift Supervisor</td> <td>Starbucks</td>
+        </tr>
+      </table>
+
+    </article>
+
+    <article id="hobbies">
     <h2><em>Hobbies</em></h2>
-      <p>
-        In addition to traveling, I enjoy baking, movies, and crafting. I am also
-        a huge thrill-seeker and animal lover, which is why I exercise a vegetarian
-        diet and own an adorable Yorkie named Lexi!
-      </p>
-      <p>
-        In regards to STEM fields, I am by nature a very analytical and logical
-        thinker who enjoys problem solving and creating, which is why mathematics
-        and computer programming are strong passions of mine.
-      </p>
-  <h />
+
+      <img src="Images/Hobbies.jpg" alt="Picture of me riding a racecar" />
+
+      <ul>
+        <li>Places I've Traveled</li>
+          <ol>
+            <li>Germany</li>
+            <li>Switzerland</li>
+            <li>Austria</li>
+            <li>China</li>
+            <li>South Africa</li>
+            <li>Canada</li>
+          </ol>
+
+        <li>Hobbies/Interests</li>
+          <ul>
+            <li>Baking</li>
+            <li>Movies</li>
+            <li>Animals</li>
+            <li>Thrill-Seeking</li>
+            <li>Coding</li>
+          </ul>
+      </ul>
+
+    </article>
+
+  </section>
+
+  <footer>
+    <hr />
+    <p>&copy; 2020 Brianna Larson. All rights reserved.</p>
+  </footer>
 
 </body>
 
