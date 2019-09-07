@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+  Name: Brianna Larson
+  Date Created: 9/4/19
+  Most recent revision: 9/6/19
+-->
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Contact Us</title>
+
+  <script type="text/JavaScript" src="Scripts/formValidation.js"></script>
+  <link href="Styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    input[type=text], select, textarea {
+      width: 75%;
+      padding: 12px;
+      border: thin solid #363020;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label, legend {
+      padding: 12px 15px 12px 5px;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    select {
+      height: 40px;
+      margin-top: 5px;
+      font-size: 1.1em;
+      border: thin solid #363020;
+    }
+
+    input[type=submit] {
+      background-color: #8c2020;
+      color: #d6d5c9;
+      padding: 5px 10px;
+      border: thin solid #363020;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1em;
+      margin-left: 40%;
+    }
+
+    input[type=submit]:hover {
+      background-color: #b8baab;
+      color: #8c2020;
+      font-weight: bold;
+    }
+
+    .container {
+      margin-bottom: 15px;
+    }
+
+    .col-40 {
+      float: left;
+      width: 40%;
+      margin-top: 8px;
+      padding-right: 5px;
+      text-align: right;
+    }
+
+    .col-60 {
+      float: left;
+      width: 60%;
+      margin-top: 8px;
+      padding-left: 5px;
+      text-align: left;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-40, .col-60, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 15px;
+      }
+
+      .col-40 {
+        text-align: left;
+      }
+
+      input[type=submit] {
+        margin: 15px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1><strong><i class="fa fa-hamburger" style="padding-right: 15px;"></i>Flavor Town</strong></h1>
+    <h2>Bar & Grill</h2>
+  </header>
+
+  <nav>
+    <a class="btn badge-pill" href="home.html"><i class="fa fa-home" style="padding-right: 8px;"></i>Home</a>
+    <a class="btn badge-pill" href="menu.html"><i class="fa fa-book-open" style="padding-right: 8px;"></i>Menu</a>
+    <a class="btn badge-pill" href="contact.html"><i class="fa fa-phone" style="padding-right: 8px;"></i>Contact Us</a>
+    <div class="clear-float"></div>
+  </nav>
+
+  <div class="container">
+  <form name="contactForm" onsubmit="return validateForm();" method="POST">
+
+    <div class="row">
+      <div class="col-40">
+        <label for="name">Name:</label>
+      </div>
+      <div class="col-60">
+        <input type="text" id="name" name="name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <label for="email">Email:</label>
+      </div>
+      <div class="col-60">
+        <input type="text" id="email" name="email">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <label for="phone">Phone:</label>
+      </div>
+      <div class="col-60">
+        <input type="text" id="phone" name="phone">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <label for="reason">Reason for Inquiry:</label>
+      </div>
+      <div class="col-60">
+        <select id="reason" name="reason"> <br />
+          <option value="catering" selected>Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <label for="info">Additional Information:</label>
+      </div>
+      <div class="col-60">
+        <textarea id="info" name="info"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <legend>Have you been to the restaurant?</legend>
+      </div>
+      <div class="col-60">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="choice1" name="visit" value="no">
+          <label class="form-check-label" for="choice1">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="choice2" name="visit" value="yes">
+          <label class="form-check-label" for="choice2">Yes</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-40">
+        <legend>Best days to contact you:</legend>
+      </div>
+      <div class="col-60">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="monday" name="day" value="monday">
+          <label class="form-check-label" for="monday">M</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="tuesday" name="day" value="tuesday">
+          <label class="form-check-label" for="tuesday">T</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="wednesday" name="day" value="wednesday">
+          <label class="form-check-label" for="wednesday">W</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="thursday" name="day" value="thursday">
+          <label class="form-check-label" for="thursday">Th</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="friday" name="day" value="friday">
+          <label class="form-check-label" for="friday">F</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="submit" id="submit" name="submit" value="Send Request" class="btn">
+    </div>
+
+  </form>
+  </div>
+
+  <footer>
+    <p>2468 Lone Oak Rd, Eagan, MN, 55122</p>
+    <p>(612) - 763 - 8756</p>
+  </footer>
+
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
