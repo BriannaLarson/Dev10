@@ -8,6 +8,33 @@
 
 <head>
     <title>Brianna's Portfolio</title>
+    <link href="Styles/main.css" rel="stylesheet" type="text/css" />
+    <style>
+      caption {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 8px;
+      }
+      table, th, td {
+        border: 1px solid #0d1f2d;
+        border-collapse: collapse;
+        padding: 5px 10px;
+      }
+      table {
+        width: 90%;
+        margin: auto;
+      }
+      tr {
+        height: 30px;
+      }
+      th {
+        background-color: #546a7b;
+        color: #f2eded;
+      }
+      tr:nth-child(odd) {
+        background-color: #e4c3ad;
+      }
+    </style>
 </head>
 
 <body>
@@ -18,16 +45,15 @@
 
 <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
   <nav>
-    <hr />
         <p><a href="projects.html">Projects</a></p>
         <p><a href="contact.html">Contact</a></p>
         <p><a href="testimonials.html">Testimonials</a></p>
-    <hr />
+        <div class="clear-float"></div>
   </nav>
 
   <section>
 
-    <article id="about-me">
+    <article class="border" id="about-me">
     <h2><em>About Me</em></h2>
 
       <img src="Images/AboutMe.jpg" alt="Portrait of Brianna Larson" />
@@ -39,29 +65,35 @@
       <p>
         I currently work as an <strong>Account Install Specialist</strong> for Prime Therapeutics in Eagan, MN.
       </p>
+
+      <div class="clear-float"></div>
     </article>
 
     <article id="past-experiences">
     <h2><em>Past Experiences</em></h2>
 
-      <img src="Images/PastExperiences.jpg" alt="Picture from trip to Switzerland" />
+      <img src="Images/PastExperiences.jpg" alt="Picture from trip to Switzerland" width="350" />
 
+      <div class="right-content">
       <table>
         <caption>Employment History</caption>
-
-        <tr>
-          <th>Years of Employment</th>  <th>Title</th>  <th>Company</th>
-        </tr>
-
-        <tr>
-          <td>2019-Present</td> <td>Account Install Specialist</td> <td>Prime Therapeutics</td>
-        </tr>
-
-        <tr>
-          <td>2015-2019</td>  <td>Shift Supervisor</td> <td>Starbucks</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Years of Employment</th>  <th>Title</th>  <th>Company</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2019-Present</td> <td>Account Install Specialist</td> <td>Prime Therapeutics</td>
+          </tr>
+          <tr>
+            <td>2015-2019</td>  <td>Shift Supervisor</td> <td>Starbucks</td>
+          </tr>
+        </tbody>
       </table>
+      </div>
 
+      <div class="clear-float"></div>
     </article>
 
     <article id="hobbies">
@@ -69,6 +101,7 @@
 
       <img src="Images/Hobbies.jpg" alt="Picture of me riding a racecar" />
 
+      <div class="right-content">
       <ul>
         <li>Places I've Traveled</li>
           <ol>
@@ -89,13 +122,14 @@
             <li>Coding</li>
           </ul>
       </ul>
+      </div>
 
+      <div class="clear-float"></div>
     </article>
 
   </section>
 
   <footer>
-    <hr />
     <p>&copy; 2020 Brianna Larson. All rights reserved.</p>
   </footer>
 
