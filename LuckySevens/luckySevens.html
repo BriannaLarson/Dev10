@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+  Name: Brianna Larson
+  Date Created: 9/8/19
+  Most recent revision: 9/9/19
+-->
+<html>
+
+<head>
+
+  <title>Lucky Sevens</title>
+
+  <!-- Form validation and game play -->
+  <script type="text/JavaScript" src="luckySevens.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Internal style sheet -->
+  <style>
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+    }
+
+    label, input {
+      font-size: 1.5em;
+      padding-right: 10px;
+      margin: 15px 0;
+    }
+
+    button {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    button[type=reset]:hover {
+      text-decoration: underline;
+    }
+
+    caption {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    td {
+      font-size: 1.2em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div style="text-align: center; float: left">
+      <h1>Lucky Sevens</h1>
+
+      <form name="luckySevens" onsubmit="return playGame();" onreset="resetBet();" class="form-inline">
+        <div class="form-group">
+          <label for="bet">Starting Bet:</label>
+          <input type="number" class="form-control" id="bet" placeholder="$0.00">
+        </div> <br />
+
+        <button type="submit" id="playButton" class="btn btn-default">Play</button>
+        <button type="reset" id="resetButton" class="btn">Reset</button>
+      </form>
+    </div>
+    <div style="clear: both"></div>
+
+    <table id="results" class="table table-striped" style="display:none;">
+      <caption>Results</caption>
+      <tbody>
+        <tr>
+          <td>Starting Bet</td> <td><span id="startingBet"></span></td>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke</td> <td><span id="totalRolls"></span></td>
+        </tr>
+        <tr>
+          <td>Highest Amount Won</td> <td><span id="highestAmount"></span></td>
+        </tr>
+        <tr>
+          <td>Roll Count at Highest Amount Won</td> <td><span id="rollCount"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
