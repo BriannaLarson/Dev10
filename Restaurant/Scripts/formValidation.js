@@ -1,3 +1,9 @@
+/*
+Creator: Brianna Larson
+Date Created: 9/4/19
+Date last modified: 9/9/19
+*/
+
 function validateForm() {
     var name = document.forms["contactForm"]["name"].value;
     var email = document.forms["contactForm"]["email"].value;
